@@ -1,0 +1,12 @@
+schema:
+  - './schema/modules/**/schema.ts'
+documents: []
+config:
+  noNamespaces: true
+hooks:
+  afterAllFileWrite:
+    - prettier --write
+generates:
+  ./schema/generated.schema.graphql:
+    plugins:
+      - schema-ast

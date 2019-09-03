@@ -1,0 +1,82 @@
+scalar Date
+
+scalar DateTime
+
+scalar EmailAddress
+
+scalar JSON
+
+type ModuleA_Mutations {
+  moduleA_doSomething1(arg1: String!, arg2: ID!): Boolean
+}
+
+type ModuleD_Mutations {
+  moduleD_doSomething1(arg1: String!): String!
+  moduleD_doSomething2(arg1: String!): String
+}
+
+type Mutation {
+  common_doSomething1(arg1: String): Boolean
+  moduleA: ModuleA_Mutations
+  moduleC_doSomething1(arg1: ID!): String
+  moduleE_doSomething1(arg1: String!): Boolean
+  moduleE_doSomething2(arg1: ID!, arg2: String!): Boolean
+  moduleE_doSomething3(arg1: ID!): Boolean
+  moduleE_doSomething4(arg1: String!): Boolean
+  moduleE_doSomething5(arg1: ID!, args: String!): Boolean
+  moduleE_doSomething6(arg1: ID!): Boolean
+  moduleD: ModuleD_Mutations
+}
+
+scalar NegativeFloat
+
+scalar NegativeInt
+
+interface Node {
+  id: ID!
+}
+
+scalar NonNegativeFloat
+
+scalar NonNegativeInt
+
+scalar NonPositiveFloat
+
+scalar NonPositiveInt
+
+scalar PhoneNumber
+
+scalar PositiveFloat
+
+scalar PositiveInt
+
+type Query {
+  common_getSomething1(arg1: ID!, arg2: String!, arg3: String, arg4: [String!]): String!
+  moduleC_doSomething1(arg1: String!): [String!]
+  moduleC_doSomething2(arg1: ID!): String
+  moduleB_getSomething1(arg1: ID!): [String!]
+  moduleE_getSomething1(arg1: String): [String!]!
+  moduleE_getSomething2(arg1: String!, arg2: String!): [String!]!
+  moduleE_getSomething3(arg1: String!, arg2: String!): [String!]!
+  moduleE_getSomething4(arg1: String!, arg2: String!): [String!]!
+  moduleE_getSomething5(arg1: String!): JSON!
+  moduleE_getSomething6(arg1: String!, arg2: String!): [String!]!
+  moduleE_getSomething7(arg1: ID!): String!
+  moduleE_getSomething8(arg1: String!): [String!]!
+  moduleE_getSomething9(arg1: ID!): String!
+  moduleE_getSomething10(arg1: String): [String!]!
+  moduleE_getSomething11(arg1: String): [String!]!
+  moduleE_getSomething12: [String!]!
+  moduleE_getSomething13: [String!]!
+  moduleE_getSomething14: [String!]!
+  moduleD_getSomething1(arg1: ID!): [String!]
+  moduleD_getSomething2(arg1: ID!, arg2: String): String
+}
+
+scalar Time
+
+scalar UnsignedFloat
+
+scalar UnsignedInt
+
+scalar URL

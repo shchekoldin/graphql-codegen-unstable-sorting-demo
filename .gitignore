@@ -1,0 +1,13 @@
+# IDE & editors
+
+.idea/
+.vscode/
+
+# Project
+
+node_modules/
+*.prev
+
+# OS specific
+
+.DS_Store
